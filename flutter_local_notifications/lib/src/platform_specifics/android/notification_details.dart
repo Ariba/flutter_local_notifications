@@ -36,6 +36,7 @@ class AndroidNotificationDetails {
     this.onlyAlertOnce,
     this.showWhen = true,
     this.when,
+    this.usesChronometer = false,
     this.channelShowBadge = true,
     this.showProgress = false,
     this.maxProgress = 0,
@@ -156,6 +157,11 @@ class AndroidNotificationDetails {
   /// If it's not specified but a timestamp should be shown (i.e. [showWhen] is set to `true`),
   /// then Android will default to showing when the notification occurred.
   final int when;
+
+  /// Specifies if the notification should display a stopwatch since when occurred.
+  ///
+  /// To control the start of timer the notification, use [when].
+  final bool usesChronometer;
 
   /// Specifies if the notification will be used to show progress.
   final bool showProgress;

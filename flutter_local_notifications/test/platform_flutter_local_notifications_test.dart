@@ -111,6 +111,7 @@ void main() {
               'onlyAlertOnce': null,
               'showWhen': true,
               'when': null,
+              'usesChronometer': false,
               'showProgress': false,
               'maxProgress': 0,
               'progress': 0,

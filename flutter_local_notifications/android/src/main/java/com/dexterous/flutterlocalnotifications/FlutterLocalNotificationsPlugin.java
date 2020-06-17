@@ -155,6 +155,10 @@ public class FlutterLocalNotificationsPlugin implements MethodCallHandler, Plugi
             builder.setShowWhen(BooleanUtils.getValue(notificationDetails.showWhen));
         }
 
+        if (notificationDetails.usesChronometer != null) {
+            builder.setUsesChronometer(BooleanUtils.getValue(notificationDetails.usesChronometer));
+        }
+
         if (notificationDetails.when != null) {
             builder.setWhen(notificationDetails.when);
         }

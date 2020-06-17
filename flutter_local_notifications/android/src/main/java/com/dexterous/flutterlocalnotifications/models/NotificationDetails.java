@@ -103,6 +103,7 @@ public class NotificationDetails {
     private static final String TIMEOUT_AFTER = "timeoutAfter";
     private static final String SHOW_WHEN = "showWhen";
     private static final String WHEN = "when";
+    private static final String USES_CHRONOMETER = "usesChronometer";
     private static final String ADDITIONAL_FLAGS = "additionalFlags";
 
 
@@ -154,6 +155,7 @@ public class NotificationDetails {
     public String category;
     public int[] additionalFlags;
     public Boolean showWhen;
+    public Boolean usesChronometer;
     public Long when;
 
 
@@ -205,6 +207,7 @@ public class NotificationDetails {
             notificationDetails.onlyAlertOnce = (Boolean) platformChannelSpecifics.get(ONLY_ALERT_ONCE);
             notificationDetails.showWhen = (Boolean) platformChannelSpecifics.get(SHOW_WHEN);
             notificationDetails.when = parseLong(platformChannelSpecifics.get(WHEN));
+            notificationDetails.usesChronometer = (Boolean) platformChannelSpecifics.get(USES_CHRONOMETER);
             readProgressInformation(notificationDetails, platformChannelSpecifics);
             readColor(notificationDetails, platformChannelSpecifics);
             readChannelInformation(notificationDetails, platformChannelSpecifics);
